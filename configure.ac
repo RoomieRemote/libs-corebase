@@ -125,8 +125,8 @@ AS_IF([test "$with_gcd" != "no"],
       AS_IF([test x"$ac_cv_header_dispatch_dispatch_h" = "xno"],
             AS_IF([test x"$with_gcd" = "xyes"],
                   AC_MSG_ERROR([Could not find the Grand Central Dispatch headers.])),
-      	    AC_CHECK_LIB(dispatch, dispatch_get_main_queue_eventfd_np)
-            AS_IF([test x"$ac_cv_lib_dispatch_dispatch_get_main_queue_eventfd_np" = "xno" -a x"$with_gcd" = "xyes"],
+      	    AC_CHECK_LIB(dispatch, dispatch_get_main_queue_handle_np)
+            AS_IF([test x"$ac_cv_lib_dispatch_dispatch_get_main_queue_handle_np" = "xno" -a x"$with_gcd" = "xyes"],
                   AC_MSG_ERROR([Compatible libdispatch not found for GCD support!])))])
 
 #---

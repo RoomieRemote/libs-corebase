@@ -4130,9 +4130,9 @@ fi
   as_fn_error $? "Could not find the Grand Central Dispatch headers." "$LINENO" 5
 fi
 else
-  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for dispatch_get_main_queue_eventfd_np in -ldispatch" >&5
-$as_echo_n "checking for dispatch_get_main_queue_eventfd_np in -ldispatch... " >&6; }
-if ${ac_cv_lib_dispatch_dispatch_get_main_queue_eventfd_np+:} false; then :
+  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for dispatch_get_main_queue_handle_np in -ldispatch" >&5
+$as_echo_n "checking for dispatch_get_main_queue_handle_np in -ldispatch... " >&6; }
+if ${ac_cv_lib_dispatch_dispatch_get_main_queue_handle_np+:} false; then :
   $as_echo_n "(cached) " >&6
 else
   ac_check_lib_save_LIBS=$LIBS
@@ -4192,27 +4192,27 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
 #ifdef __cplusplus
 extern "C"
 #endif
-char dispatch_get_main_queue_eventfd_np ();
+char dispatch_get_main_queue_handle_np ();
 int
 main ()
 {
-return dispatch_get_main_queue_eventfd_np ();
+return dispatch_get_main_queue_handle_np ();
   ;
   return 0;
 }
 _ACEOF
 if ac_fn_c_try_link "$LINENO"; then :
-  ac_cv_lib_dispatch_dispatch_get_main_queue_eventfd_np=yes
+  ac_cv_lib_dispatch_dispatch_get_main_queue_handle_np=yes
 else
-  ac_cv_lib_dispatch_dispatch_get_main_queue_eventfd_np=no
+  ac_cv_lib_dispatch_dispatch_get_main_queue_handle_np=no
 fi
 rm -f core conftest.err conftest.$ac_objext \
     conftest$ac_exeext conftest.$ac_ext
 LIBS=$ac_check_lib_save_LIBS
 fi
-{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_dispatch_dispatch_get_main_queue_eventfd_np" >&5
-$as_echo "$ac_cv_lib_dispatch_dispatch_get_main_queue_eventfd_np" >&6; }
-if test "x$ac_cv_lib_dispatch_dispatch_get_main_queue_eventfd_np" = xyes; then :
+{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_dispatch_dispatch_get_main_queue_handle_np" >&5
+$as_echo "$ac_cv_lib_dispatch_dispatch_get_main_queue_handle_np" >&6; }
+if test "x$ac_cv_lib_dispatch_dispatch_get_main_queue_handle_np" = xyes; then :
   cat >>confdefs.h <<_ACEOF
 #define HAVE_LIBDISPATCH 1
 _ACEOF
@@ -4221,7 +4221,7 @@ _ACEOF
 
 fi
 
-            if test x"$ac_cv_lib_dispatch_dispatch_get_main_queue_eventfd_np" = "xno" -a x"$with_gcd" = "xyes"; then :
+            if test x"$ac_cv_lib_dispatch_dispatch_get_main_queue_handle_np" = "xno" -a x"$with_gcd" = "xyes"; then :
   as_fn_error $? "Compatible libdispatch not found for GCD support!" "$LINENO" 5
 fi
 fi

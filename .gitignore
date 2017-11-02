@@ -4,3 +4,5 @@ obj
 config.*
 CFBase.h
 *.tmp
+autom4te.cache
+Source/GNUmakefile
